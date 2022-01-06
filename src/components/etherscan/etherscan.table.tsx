@@ -75,7 +75,7 @@ export default function EtherscanTable() {
     let decimal = new BigNumber(1000000000000000000);
     val = val.dividedBy(decimal);
 
-    return (val.toNumber().toFixed(0)).toString();
+    return Number(val.toNumber().toFixed(0)).toLocaleString();
   }
 
   function NewTab(contractaddress:any) { 
