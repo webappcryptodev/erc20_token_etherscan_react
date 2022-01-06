@@ -39,7 +39,7 @@ export default function EtherscanTable() {
       
       trx = await fetchDetail(currentPage);
       setState(trx);
-    }, 3000);
+    }, 10000);
     return () => clearInterval(data);
   }, [currentPage])
 
@@ -65,9 +65,9 @@ export default function EtherscanTable() {
     let timeInMilisec: number = date1.getTime() - date2.getTime();        
     let age = secondsToDhms(timeInMilisec/1000);
 
-    const string1 = age.slice(0, 15);    
+    // const string1 = age.slice(0, 15);    
     
-    return string1;
+    return age;
   }
 
   function getRewards(value: string): any {
@@ -137,7 +137,7 @@ export default function EtherscanTable() {
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
-                  {transactions.slice(0).map((transaction: any,index:number) => (
+                  {transactions.map((transaction: any,index:number) => (
                     <tr key={index}>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="text-table-body text-gray-900">{ getTimestamp(transaction.timeStamp) }</div>                        
