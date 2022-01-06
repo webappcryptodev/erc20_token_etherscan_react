@@ -126,6 +126,12 @@ export default function EtherscanTable() {
                       scope="col"
                       className="px-6 py-3 text-xs text-table-head text-gray-500 uppercase tracking-wider"
                     >
+                      Token Symbol
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-xs text-table-head text-gray-500 uppercase tracking-wider"
+                    >
                       View Trx
                     </th>
                   </tr>
@@ -147,6 +153,7 @@ export default function EtherscanTable() {
                           {transaction.comfirmations != 0 ? "success" : "error"}
                         </span>
                       </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-table-body text-gray-500">{transaction.tokenSymbol}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-table-body text-gray-500">{getRewards(transaction.value)}</td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <a href="">                        
