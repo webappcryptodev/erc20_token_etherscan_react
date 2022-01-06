@@ -33,7 +33,7 @@ export default function EtherscanTable() {
       }
       
       blockstore = len;
-      blockbypage = Math.floor(Number((len/10).toFixed(0)))+1;
+      blockbypage = Math.floor(Number((len/10).toFixed(0)));
       selectState = false;
       setPageLimit(blockbypage);
       
