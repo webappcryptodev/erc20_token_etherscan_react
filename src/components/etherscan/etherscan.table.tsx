@@ -39,7 +39,7 @@ export default function EtherscanTable() {
       
       trx = await fetchDetail(currentPage);
       setState(trx);
-    }, 10000);
+    }, 3000);
     return () => clearInterval(data);
   }, [currentPage])
 
