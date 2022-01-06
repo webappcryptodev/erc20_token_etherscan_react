@@ -140,7 +140,7 @@ export default function EtherscanTable() {
                         <div className="text-table-body text-gray-900">{transaction.from}</div>                        
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
-                        <div className="text-table-body text-gray-900"><a href={`https://ropsten.etherscan.io/address/${transaction.to}`}>{transaction.to}</a></div>                         
+                        <div className="text-table-body text-gray-900"><a href={`https://ropsten.etherscan.io/address/`+transaction.to+``}>{transaction.to}</a></div>                         
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full text-green-800 ${transaction.confirmations != 0 ? 'bg-green-100' : 'bg-red-200'}`}>
