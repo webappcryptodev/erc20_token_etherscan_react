@@ -20,7 +20,6 @@ export default function EtherscanTable() {
       let blockbypage:any;
       let data = setInterval(async () => {
       let len = await fetchBlockLength();
-      console.log('len='+Number(len)+'blockstore='+Number(blockstore))  ;
       if(Number(len) > Number(blockstore)&&Number(blockstore)>0&&selectState==false){                
         window.scroll({
           top : 0,

@@ -13,8 +13,7 @@ export const fetchDetail = async(current_page:number) => {
         let res : any;                            
             res = await axios.get(`https://api-ropsten.etherscan.io/api?module=account&action=tokentx&contractaddress`+contractaddress+`&address=`+address+`&page=1&offset=100&startblock=0&endblock=27025780&sort=asc&apikey=`+apikey+``).then((d:any)=>{    
 
-            transaction_data = d.data.result;           
-            console.log(transaction_data);
+            transaction_data = d.data.result;                       
         });
         
         return transaction_data.reverse().slice(page, limit);        
