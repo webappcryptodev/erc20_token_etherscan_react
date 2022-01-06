@@ -152,9 +152,9 @@ export default function EtherscanTable() {
                         <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full text-green-800 ${transaction.confirmations != 0 ? 'bg-green-100' : 'bg-red-200'}`}>
                           {transaction.comfirmations != 0 ? "success" : "error"}
                         </span>
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-table-body text-gray-500">{transaction.tokenSymbol}</td>
+                      </td>                      
                       <td className="px-6 py-4 whitespace-nowrap text-table-body text-gray-500">{getRewards(transaction.value)}</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-table-body text-gray-500">{transaction.tokenSymbol}</td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <a href="">                        
                         <input type="button" className="view_trx text-indigo-600 hover:text-indigo-900"  onClick={ () => NewTab(transaction.hash)} id="trx_id" value="View Trx"  />                                      
